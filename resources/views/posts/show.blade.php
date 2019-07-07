@@ -20,8 +20,8 @@ View Post
   <div class="card-body">
     <h4 class="card-title text-danger">{{$post->title}}</h4>
     <p class="card-text">{{$post->body}}</p>
-   {{--  <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a> --}}
+    <a href="/" class="card-link">Regresar</a>
+    {{-- <a href="#" class="card-link">Another link</a> --}}
   </div>
 </div>
 </div>
