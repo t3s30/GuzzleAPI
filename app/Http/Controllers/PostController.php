@@ -17,6 +17,9 @@ class PostController extends Controller{
     public function __construct(Posts $posts){
         $this->posts = $posts;
     }
+
+   
+
     //Method controller call on routes
     public function index(){
        $posts =  $this->posts->all();
@@ -27,8 +30,19 @@ class PostController extends Controller{
     public function show($id){
     
         $post = $this->posts->find($id);
-
+       
         return view('posts.show', compact('post'));             
     }
+
+    
+       //Call id post
+       public function comments($id){
+    
+        $Postcoment = $this->posts->fixcoment($id);
+
+        return view('posts.comments', compact('Postcoment'));             
+    }
+
+  
 }
 

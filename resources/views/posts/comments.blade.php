@@ -14,18 +14,24 @@ View Post
 </head>
 <body>
 <div class="container">
-<h1>Single Post</h1>
+<h1>Postcoment Post</h1>
 <!-- iterate Data -->
+@foreach ($Postcoment as $item)
 <div class="card" style="width: 100%;">
   <div class="card-body">
-    <h4 class="card-title text-danger">{{$post->title}}</h4>
-    <p class="card-text">{{$post->body}}</p>
+      
+  <h4 class="card-title text-danger">{{$item->id}}</h4>
+    {{-- <p class="card-text">{{$post->body}}</p> --}}
     <a href="/" class="card-link">Regresar</a>
-    <a class="text-success" href="/posts/{{$post->id}}/comments">COMENTARIOS</a>
-    {{--   --}}
-  {{-- <a href="#" class="card-link">{{$Postcoment->body}}</a> --}}
+    {{-- <a href="#" class="card-link">Another link</a> --}}
   </div>
-</div>
+</div>  
+@endforeach
+
+
+
+
+
 </div>
 </body>
-</html>
+</html> 

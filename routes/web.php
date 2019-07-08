@@ -22,6 +22,21 @@ use GuzzleHttp\Client;
 Route::get('/','PostController@index');
 
 Route::get('posts/{id}','PostController@show');
+
+
+Route::get('{id}','PostController@comments');
+//Comments Controller
+
+/* 
+route('products.index', ['manufacturer' => 'Samsung']);
+ */
+/* // Returns 'http://localhost/products?manufacturer=Samsung'
+route('products.show', [$product->id, 'model' => 'T9X']);
+
+comments?postId=1
+
+// Returns 'http://localhost/products/1?model=T9X'
+ */
 /* 
 Route::get('/', function () {
 
